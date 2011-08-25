@@ -1,0 +1,1 @@
+Melexis external maven repository.
