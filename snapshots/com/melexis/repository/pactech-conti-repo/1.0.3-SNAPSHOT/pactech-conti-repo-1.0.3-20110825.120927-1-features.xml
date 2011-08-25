@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+  <feature name="pactech-conti-bundle" version="1.0.3-SNAPSHOT">
+    <bundle>mvn:org.hsqldb/com.springsource.org.hsqldb/1.8.0.10/jar</bundle>
+
+    <bundle>mvn:com.melexis.dto/dto/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.converter/converter/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.waferproperty/waferproperty/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis/lot-converter/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.wmdb-interface/wmdb-interface/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.validation/validation/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.validation.passdie/passdievalidation/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.validation.postprocessing/postprocessingvalidation/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.executor/executor/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.executor.cli/cli-executor/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.th01.convert/th01-convert/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.convertor.convertmap/convertmap-convertor/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.convertor.pactech/pactech/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.convertor.conti/conti/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.th01.convert.conti.regensburg/conti-regensburg/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.convertor.dlog/dlog-convertor/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.splitter/splitter/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis/libth01/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:commons-lang/commons-lang/2.6/jar</bundle>
+    <bundle>mvn:org.apache.camel.extra/camel-hibernate/2.6.0/jar</bundle>
+    <bundle>mvn:commons-dbcp/commons-dbcp/1.2.2/jar</bundle>
+    <bundle>mvn:net.sourceforge.ehcache/com.springsource.net.sf.ehcache/1.6.2/jar</bundle>
+    <bundle>mvn:commons-io/commons-io/2.0.1/jar</bundle>
+    <bundle>mvn:com.melexis.th01.convert.service/wafermap-convertor/1.0.3-SNAPSHOT/jar</bundle>
+
+
+    <bundle>mvn:com.melexis.dao/dao/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.datastore.wafermap/wafermapstore/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.event/event/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.config/config/1.0.3-SNAPSHOT/jar</bundle>
+
+    <bundle>mvn:com.googlecode.guava-osgi/guava-osgi/9.0.0/jar</bundle>
+    <bundle>mvn:com.melexis.validation/validation/1.0.3-SNAPSHOT/jar</bundle>
+    <bundle>mvn:com.melexis.template/template/1.0.3-SNAPSHOT/jar</bundle>
+
+    <bundle>mvn:org.postgresql/com.springsource.org.postgresql.jdbc4/8.3.604/jar</bundle>
+
+    <!-- DEPENDENCIES FOR API -->
+    <bundle>mvn:com.melexis.api/api/1.0.3-SNAPSHOT/jar</bundle>
+    <feature>cxf-jaxrs</feature>
+
+    <bundle>mvn:com.melexis/pactech-conti-route/1.0.3-SNAPSHOT/jar</bundle>
+
+    <feature>camel-core</feature>
+    <feature>camel-ftp</feature>
+    <feature>camel-activemq</feature>
+    <feature>jpa-hibernate</feature>
+  </feature>
+</features>

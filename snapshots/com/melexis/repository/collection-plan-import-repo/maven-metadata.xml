@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.melexis.repository</groupId>
+  <artifactId>collection-plan-import-repo</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20110825120927</lastUpdated>
+  </versioning>
+</metadata>
