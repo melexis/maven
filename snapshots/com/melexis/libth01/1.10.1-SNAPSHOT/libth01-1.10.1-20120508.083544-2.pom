@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <artifactId>ewafermapping</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>1.10.1-SNAPSHOT</version>
+    </parent>
+    <packaging>bundle</packaging>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>libth01</artifactId>
+    <name>melexis libth01</name>
+    <version>1.10.1-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                        <Import-Package>
+                            com.melexis.th01,
+                            com.melexis.th01.exception,
+                            *
+                        </Import-Package>
+                        <Export-Package>
+                            com.melexis.th01,
+                            com.melexis.th01.exception
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
