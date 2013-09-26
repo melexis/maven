@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <feature name="esb-foundation" version="1.14.4">
+        <!--Platform related features-->
+        <feature>karaf-framework</feature>
+        <feature>config</feature>
+        <feature>xml-specs</feature>
+        <feature>activemq-broker</feature>
+        <feature>activemq-spring</feature>
+        <feature>camel</feature>
+        <feature>camel-ftp</feature>
+        <feature>camel-activemq</feature>
+        <feature>camel-nmr</feature>
+        <feature>saaj</feature>
+        <feature>camel-cxf</feature>
+        <feature>camel-blueprint</feature>
+        <feature>camel-sql</feature>
+        <feature>camel-mail</feature>
+        <feature>camel-jdbc</feature>
+        <feature>camel-http</feature>
+        <feature>spring</feature>
+        <feature>camel-spring</feature>
+        <feature>war</feature>
+
+        <!--Melexis Infrastructure related features-->
+        <feature>datasources-bundle</feature>
+        <bundle>mvn:com.melexis.foundation/util/1.14.4</bundle>
+        <bundle>mvn:org.springframework/spring-jdbc/3.0.5.RELEASE</bundle>
+        <bundle>mvn:org.springframework/spring-orm/3.0.5.RELEASE</bundle>
+        <bundle>mvn:commons-io/commons-io/2.0.1/jar</bundle>
+        <bundle>mvn:commons-codec/commons-codec/1.6/jar</bundle>
+        <bundle>mvn:commons-lang/commons-lang/2.6/jar</bundle>
+        <bundle>mvn:com.googlecode.guava-osgi/guava-osgi/11.0.1/jar</bundle>
+        <bundle>mvn:joda-time/joda-time/1.6</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.velocity/1.7_3/jar</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.2.2_6</bundle>
+        <bundle>wrap:mvn:com.eaio.uuid/uuid/3.2</bundle>
+    </feature>
+</features>

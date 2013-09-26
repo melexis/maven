@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+  <feature name="datasources-bundle" version="1.14.4">
+      <bundle>wrap:mvn:hsqldb/hsqldb/1.8.0.7</bundle>
+<!-- Use older version of the Oracle driver to support RTWM (previous version: ojdbc/ojdbc5/11.2.0.1.0) -->
+      <bundle>wrap:mvn:com.oracle/ojdbc14/10.2.0.2.0</bundle>
+      <bundle>mvn:org.postgresql/com.springsource.org.postgresql.jdbc4/8.3.604/jar</bundle>
+  </feature>
+</features>
