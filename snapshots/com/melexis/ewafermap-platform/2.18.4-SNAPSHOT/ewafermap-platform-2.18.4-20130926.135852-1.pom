@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.melexis</groupId>
+    <artifactId>ewafermap-platform</artifactId>
+    <name>Melexis Electronic Wafermapping Platform</name>
+    <packaging>pom</packaging>
+    <version>2.18.4-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.melexis.foundation</groupId>
+        <artifactId>parentpom</artifactId>
+        <version>1.14.4</version>
+    </parent>
+
+    <properties>
+	    <java.version>1.5</java.version> <!-- inkless compatibility -->
+	    <eventstore.version>1.1</eventstore.version>
+	    <internal.repo.path>file:///home/brh/Documents/work/maven</internal.repo.path>
+    </properties>
+
+    <modules>
+	<module>libth</module>
+	<module>dto</module>
+	<module>event-dto</module>
+	<module>executor</module>
+	<module>cli-executor</module>
+	<module>ssh-executor</module>
+	<module>lot-normalization</module>
+	<module>splitter</module>
+	<module>audit-model</module>
+	<module>common-routebuilder</module>
+	<module>dao</module>
+	<module>idempotentRepository</module>
+	<module>wafermapstore</module>
+	<module>viiper</module>
+	<module>wafermap-enricher</module>
+	<module>viiper-services</module>
+	<module>viiper-utils</module>
+	<module>lot-converter</module>
+	<module>aggregator</module>
+	<module>event</module>
+	<module>config</module>
+	<module>configtransformer</module>
+	<module>converter</module>
+	<module>template</module>
+	<module>dlog-convertor</module>
+	<module>test-utils</module>
+	<module>filename</module>
+	<module>lot-genealogy</module>
+	<module>partner-interface</module>
+	<module>probelocation</module>
+	<module>rotation</module>
+	<module>stackservice</module>
+	<module>template-wafermapconvertorbuilder</module>
+	<module>unixToDos</module>
+	<module>expression</module>
+	<module>groovy-expression</module>
+	<module>expression-service</module>
+	<module>wmdb-erfurt</module>
+	<module>wmdb-lib</module>
+	<module>wmdb-interface</module>
+	<module>melexis-to-partner-converter</module>
+	<module>wafermap-convertor</module>
+	<module>amkor-convertor</module>
+	<module>carsem</module>
+	<module>conti-convertor</module>
+	<module>conti-regensburg</module>
+	<module>elmos</module>
+	<module>mpd</module>
+	<module>sinf</module>
+	<module>umc</module>
+	<module>api-model</module>
+	<module>api-convertor</module>
+	<module>wafertransfer-interface</module>
+	<module>common-route-test-utils</module>
+	<module>blocked-shipments-route</module>
+	<module>confirmation-route</module>
+	<module>confirm-lot-route</module>
+	<module>clear-exception-route</module>
+	<module>audit</module>
+	<module>audit-route</module>
+	<module>ewafermap-repo</module>
+    </modules>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/melexis/ewafermap-platform.git</connection>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.6</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.perf4j</groupId>
+            <artifactId>perf4j</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- A performance management framework to add performance data to loggings et al... -->
+                <groupId>org.perf4j</groupId>
+                <artifactId>perf4j</artifactId>
+                <version>0.9.16</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Internal Releases</name>
+	    <url>${internal.repo.path}/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Internal Snapshots</name>
+	    <url>${internal.repo.path}/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>www.melexis.com</id>
+            <url>file:///var/www/hudson/ewafermapping-platform/</url>
+        </site>
+    </distributionManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-module-markdown</artifactId>
+                        <version>1.1.4</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <inputEncoding>UTF-8</inputEncoding>
+                    <outputEncoding>UTF-8</outputEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

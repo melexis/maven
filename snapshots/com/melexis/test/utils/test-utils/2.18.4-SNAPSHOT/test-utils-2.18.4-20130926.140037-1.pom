@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ewafermap-platform</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.melexis.test.utils</groupId>
+    <artifactId>test-utils</artifactId>
+    <version>2.18.4-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.melexis.dto.event</groupId>
+            <artifactId>event-dto</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.datastore.wafermap</groupId>
+            <artifactId>wafermapstore</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.dto</groupId>
+            <artifactId>dto</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.convertor</groupId>
+            <artifactId>melexis-to-partner-converter</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.viiper</groupId>
+            <artifactId>viiper-services</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.expression</groupId>
+            <artifactId>expression</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.wmdb-interface</groupId>
+            <artifactId>wmdb-interface</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+    </dependencies>
+</project>

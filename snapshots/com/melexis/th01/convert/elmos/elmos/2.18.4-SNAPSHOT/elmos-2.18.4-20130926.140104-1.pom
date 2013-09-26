@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>com.melexis</groupId>
+    <artifactId>ewafermap-platform</artifactId>
+    <version>2.18.4-SNAPSHOT</version>
+  </parent>
+  <packaging>bundle</packaging>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.melexis.th01.convert.elmos</groupId>
+  <artifactId>elmos</artifactId>
+  <version>2.18.4-SNAPSHOT</version>
+  <name>melexis elmos convertor</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.melexis</groupId>
+      <artifactId>libth</artifactId>
+      <version>2.18.4-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.melexis.convertor</groupId>
+        <artifactId>melexis-to-partner-converter</artifactId>
+        <version>2.18.4-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.melexis.th01.convert.service</groupId>
+        <artifactId>wafermap-convertor</artifactId>
+        <version>2.18.4-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions><Import-Package>org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,com.melexis.dto,*</Import-Package>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Description>${project.description}</Bundle-Description>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.melexis.convertor</groupId>
+  <artifactId>melexis-to-partner-converter</artifactId>
+  <version>2.18.4-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20130926.140030</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20130926140030</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>2.18.4-20130926.140030-1</value>
+        <updated>20130926140030</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>2.18.4-20130926.140030-1</value>
+        <updated>20130926140030</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

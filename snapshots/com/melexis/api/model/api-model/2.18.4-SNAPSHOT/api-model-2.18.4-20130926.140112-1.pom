@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>ewafermap-platform</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.melexis.api.model</groupId>
+    <artifactId>api-model</artifactId>
+    <name>Electronic Wafermapping :: API Model</name>
+    <packaging>bundle</packaging>
+
+    <version>2.18.4-SNAPSHOT</version>
+
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}
+                        </Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}
+                        </Bundle-Description>
+                        <Import-Package>
+                            *
+                        </Import-Package>
+                        <Require-Bundle>org.apache.cxf.bundle</Require-Bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

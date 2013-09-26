@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ewafermap-platform</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Electronic Wafermapping :: Template engine</name>
+    <packaging>bundle</packaging>
+    <version>2.18.4-SNAPSHOT</version>
+    <groupId>com.melexis.template</groupId>
+    <artifactId>template</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.melexis</groupId>
+            <artifactId>libth</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.perf4j</groupId>
+            <artifactId>perf4j</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                        <Import-Package>org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,
+                            org.apache.velocity;version="[1.7,2)",
+	                        org.apache.velocity.app;version="[1.7,2)",
+	                        org.apache.velocity.context;version="[1.7,2)",
+	                        org.apache.velocity.runtime.resource.loader;version="[1.7,2)",
+	                        org.apache.velocity.runtime.resource.util;version="[1.7,2)",
+                            org.apache.commons.lang;version="[2.4,3)",
+                            org.apache.log4j,
+                            com.melexis.template,
+                            *
+                        </Import-Package>
+                        <Export-Package>
+                            com.melexis.template;uses:="org.apache.velocity,
+                                                        org.apache.velocity.app,
+	                                                    org.apache.velocity.context,
+	                                                    org.apache.velocity.runtime.resource.loader,
+	                                                    org.apache.velocity.runtime.resource.util"
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

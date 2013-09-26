@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ewafermap-platform</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.melexis.partner.confirm</groupId>
+    <artifactId>confirmation-route</artifactId>
+    <packaging>bundle</packaging>
+    <version>2.18.4-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.melexis.dto</groupId>
+            <artifactId>dto</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.partner.wafertransfer.interfaces</groupId>
+            <artifactId>wafertransfer-interface</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.partner.route.common</groupId>
+            <artifactId>common-routebuilder</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-camel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+
+                        <Import-Package>com.melexis.dto,org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,
+                            org.apache.activemq.wireformat,
+                            org.postgresql,
+                            org.apache.camel.component.file.strategy,
+                            *
+                        </Import-Package>
+                        <Require-bundle>org.apache.servicemix.specs.jaxb-api-2.2</Require-bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

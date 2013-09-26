@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.melexis.executor.cli</groupId>
+  <artifactId>cli-executor</artifactId>
+  <versioning>
+    <versions>
+      <version>2.18.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130926135930</lastUpdated>
+  </versioning>
+</metadata>

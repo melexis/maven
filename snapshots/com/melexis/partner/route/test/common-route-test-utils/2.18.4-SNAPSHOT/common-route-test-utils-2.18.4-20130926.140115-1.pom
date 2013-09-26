@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ewafermap-platform</artifactId>
+        <groupId>com.melexis</groupId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.melexis.partner.route.test</groupId>
+    <artifactId>common-route-test-utils</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.melexis.dto</groupId>
+            <artifactId>dto</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.datastore.wafermap</groupId>
+            <artifactId>wafermapstore</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.partner.interfaces</groupId>
+            <artifactId>partner-interface</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-camel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+	    <version>4.8.2</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>

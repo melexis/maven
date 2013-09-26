@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>ewafermap-platform</artifactId>
+    <groupId>com.melexis</groupId>
+    <version>2.18.4-SNAPSHOT</version>
+  </parent>
+
+  <packaging>bundle</packaging>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.melexis.executor.cli</groupId>
+  <artifactId>cli-executor</artifactId>
+  <name>cli executor</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.melexis.executor</groupId>
+      <artifactId>executor</artifactId>
+      <version>2.18.4-SNAPSHOT</version>
+    </dependency>
+
+      <dependency>
+          <groupId>org.perf4j</groupId>
+          <artifactId>perf4j</artifactId>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Description>${project.description}</Bundle-Description>
+            <Import-Package>org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,
+              com.melexis.executor,
+              org.apache.commons.io,
+              org.apache.commons.lang,
+              org.apache.log4j,
+              *
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

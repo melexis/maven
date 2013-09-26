@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.melexis.idempotent</groupId>
+  <artifactId>idempotentRepository</artifactId>
+  <versioning>
+    <versions>
+      <version>2.18.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130926140015</lastUpdated>
+  </versioning>
+</metadata>

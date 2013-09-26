@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>com.melexis</groupId>
+        <artifactId>ewafermap-platform</artifactId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+    <packaging>bundle</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.melexis.th01.convert.sinf</groupId>
+    <artifactId>sinf</artifactId>
+    <name>melexis sinf convertor</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.melexis</groupId>
+            <artifactId>libth</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.dto</groupId>
+            <artifactId>dto</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.template</groupId>
+            <artifactId>template</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.th01.convert.service</groupId>
+            <artifactId>wafermap-convertor</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.datastore.wafermap</groupId>
+            <artifactId>wafermapstore</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.foundation</groupId>
+            <artifactId>util</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.template.util.wafermap</groupId>
+            <artifactId>template-wafermapconvertorbuilder</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions><Import-Package>com.melexis.dto,org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,*</Import-Package>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

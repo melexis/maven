@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.melexis.test.utils</groupId>
+  <artifactId>test-utils</artifactId>
+  <versioning>
+    <versions>
+      <version>2.18.4-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130926140037</lastUpdated>
+  </versioning>
+</metadata>

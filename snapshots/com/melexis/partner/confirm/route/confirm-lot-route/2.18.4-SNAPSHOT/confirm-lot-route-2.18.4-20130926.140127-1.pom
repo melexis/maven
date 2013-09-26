@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.melexis</groupId>
+        <artifactId>ewafermap-platform</artifactId>
+        <version>2.18.4-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>bundle</packaging>
+
+    <groupId>com.melexis.partner.confirm.route</groupId>
+    <artifactId>confirm-lot-route</artifactId>
+    <version>2.18.4-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.melexis.partner.route.common</groupId>
+            <artifactId>common-routebuilder</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.melexis.aggregator</groupId>
+            <artifactId>aggregator</artifactId>
+            <version>2.18.4-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-sql</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-camel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+
+                        <Import-Package>com.melexis.dto,org.aspectj.lang.annotation,org.perf4j.aop,org.apache.commons.jexl,org.aopalliance.aop,org.springframework.context.weaving,org.springframework.aop,org.springframework.aop.framework,
+                            com.melexis.converter,
+                            org.postgresql,
+                            oracle.jdbc,
+
+                            <!-- The following imports are added for deserializing objects from the jdbcAggregation.
+                                As ObjectOutputStream uses Class.forName to deserialize objects,  it needs to have
+                                access to all object definitions in the exchange.  Because of this,  those
+                                packages need to be imported in the MANIFEST.MF -->
+                            org.apache.commons.lang,     <!-- for assertions in lotVO -->
+                            org.apache.camel.impl,       <!-- for deserializing the defaultExchange -->
+                            org.apache.activemq.command, <!-- for deserializing org.apache.activemq.command.ActiveMQQueue -->
+                            *
+                        </Import-Package>
+                        <Require-bundle>org.apache.servicemix.specs.jaxb-api-2.2</Require-bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
